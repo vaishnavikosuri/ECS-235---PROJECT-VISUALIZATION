@@ -1,0 +1,188 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+/* Dashboard container */
+.dashboard {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+/* Header */
+.dashboard-header {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.dashboard-header h1 {
+  font-size: 64px;  /* Increased main title size */
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.5px;
+  opacity: 0.95;
+  line-height: 1.2;
+  white-space: normal;
+  max-width: 95%;
+  padding: 0 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Main layout */
+.dashboard-layout {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Bottom section - Bar and Pie */
+.bottom-section {
+  height: 100%;
+  display: flex;
+  gap: 5px;
+}
+
+/* Chart containers */
+.chart-container {
+  background-color: #000;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  padding: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Half width for bottom charts */
+.half-width {
+  width: 50%;
+}
+
+/* Chart titles */
+.chart-container h2 {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: normal;
+  white-space: nowrap;
+  opacity: 0.9;
+}
+
+/* Chart wrappers */
+.chart-wrapper {
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+/* Specific wrapper styles */
+.bar-wrapper {
+  height: 100% !important;
+  margin: 0;
+}
+
+.pie-wrapper {
+  height: 100%;
+}
+
+/* SVG styling */
+svg {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+/* Chart axis and text colors */
+.axis text {
+  fill: #fff;
+}
+
+.axis line, .axis path {
+  stroke: rgba(255, 255, 255, 0.2);
+}
+
+/* Legend styling */
+.legend text {
+  fill: #fff;
+  font-size: 0.8rem;
+}
+
+/* Remove scrollbars */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Bottom section specific styles */
+.bottom-section .chart-container {
+  padding: 10px;
+}
+
+/* Chart specific text styles */
+.chart-title {
+  fill: #fff;
+  font-size: 0.9rem;
+}
+
+.axis-label {
+  fill: #fff;
+  font-size: 0.8rem;
+}
+
+/* Ensure consistent black background */
+.chart-container, .dashboard, body, html {
+  background-color: #000;
+}
+
+/* Responsive font sizes */
+@media (max-width: 1280px) {
+  .dashboard-header h1 {
+    font-size: 52px;  /* Adjusted for smaller screens */
+  }
+  
+  .chart-container h2 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .dashboard-header h1 {
+    font-size: 72px;  /* Adjusted for larger screens */
+  }
+  
+  .chart-container h2 {
+    font-size: 1rem;
+  }
+}
+
+/* Support for dark mode */
+@media (prefers-color-scheme: dark) {
+  body, html, .dashboard, .chart-container {
+    background-color: #000;
+  }
+  
+  .dashboard-header h1,
+  .chart-container h2,
+  .axis text,
+  .legend text {
+    color: #fff;
+  }
+}
