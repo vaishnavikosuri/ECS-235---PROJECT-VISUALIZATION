@@ -1,0 +1,46 @@
+
+==================================================
+      INSIDER THREAT DETECTION ANALYSIS
+==================================================
+
+
+1. RISK DISTRIBUTION
+--------------------
+Risk Level          Count     Percentage
+----------------------------------------
+high                  399          10.0%
+medium                801          20.0%
+low                  2800          70.0%
+
+2. HIGH RISK USERS ANALYSIS
+------------------------------
+User ID        
+   Risk Score     
+   Off-Hours%     
+   Susp.Files     
+   Miss.Discon    
+---------------------------------------------------------------------------
+SDH2394             1.00     118.8%          7       23
+JDM1042             0.84      20.2%          6       18
+IMC3296             0.83      14.0%          8       23
+CJM0273             0.81      41.3%          8       14
+CHM1561             0.77     145.7%          7       22
+RAA1455             0.74     -43.0%          7       25
+XCL1792             0.72     204.4%          7       12
+KDC0444             0.71     235.1%          5       19
+AKB2312             0.70     -69.1%          7       29
+AGF0742             0.70      23.7%          5       26
+
+3. BEHAVIORAL PATTERNS
+-------------------------
+Behavior Type          High Risk      Normal    Multiple
+--------------------------------------------------------
+Off-Hours Access           39.6       -27.3      395.7x
+Suspicious Files            2.0        -0.3     2039.5x
+Device Anomalies            6.8         0.2       34.5x
+
+4. KEY FINDINGS
+---------------
+1. Off-hours access is 395.7x higher in high-risk users
+2. Suspicious file operations are 2039.5x more frequent in high-risk users
+3. Device anomalies are 34.5x more common in high-risk users
